@@ -1,0 +1,82 @@
+.account__title {
+  color: #FFFFFF;
+}
+
+@media (min-width: 769px) {
+  .account__title {
+    margin-bottom: 12px;
+  }
+}
+
+.account__text {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 769px) {
+  .account__text {
+    margin-bottom: 40px;
+  }
+}
+
+.account__link-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.account__link-wrapper__link {
+  padding: 19px 64px;
+  margin-right: 20px;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .account__link-wrapper__link {
+    width: 48%;
+  }
+}
+
+.account__link-wrapper__link:last-child {
+  margin-right: none;
+}
+
+.account__form {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.account__form__chekbox-forgot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.account__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.account__footer__link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.account__footer__text {
+  color: rgba(255, 255, 255, 0.6);
+}
+/*# sourceMappingURL=account.css.map */
