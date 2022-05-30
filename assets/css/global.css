@@ -42,26 +42,72 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
-.btn-primary {
-  background-color: #FFBB54;
-  color: #08071B;
-  border-color: #08071B;
+.btn {
+  padding: 7px 17px;
   border-radius: 14px;
   font-size: 8px;
   line-height: 12px;
 }
 
 @media (min-width: 769px) {
-  .btn-primary {
+  .btn {
+    padding: 15px 34px;
     font-size: 16px;
     line-height: 24px;
   }
+}
+
+.btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #FFBB54;
+  color: #08071B;
+  border-color: #08071B;
 }
 
 .btn-primary:hover {
   color: #FFBB54;
   border-color: #FFBB54;
   background-color: transparent;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #FFBB54;
+  border-color: #FFBB54;
+}
+
+.btn-outline:hover {
+  color: #08071B;
+  border-color: #FFBB54;
+  background-color: #FFBB54;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-control:hover, .form-control:focus, .form-control:active {
+  border-color: #FFBB54;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-link {
+  color: #FFBB54;
+}
+
+.form-link:hover {
+  color: #FFBB54;
+  text-decoration: underline;
+}
+
+label {
+  color: #FFBB54;
 }
 
 .navigation.sticky {
@@ -166,6 +212,10 @@ h1, h2, h3, h4, h5, h6, p {
 .navigation__wrapper__navbar__nav__item__link:hover {
   color: #FFFFFF;
   opacity: 0.7;
+}
+
+.navigation__wrapper__navbar__social__button {
+  padding: 4px;
 }
 
 .navigation__wrapper__navbar__social__button svg {

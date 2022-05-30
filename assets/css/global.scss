@@ -41,28 +41,72 @@ body {
 h1,h2,h3,h4,h5,h6,p {
     margin: 0;
 }
-.btn {
 
+.btn {
+    padding: 7px 17px;
+    border-radius: 14px;
+    font-size: 8px;
+    line-height: 12px;
+    
+    @media (min-width: 769px) {
+        padding: 15px 34px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
 }
 
 .btn-primary {
     background-color: $primary-button-bg-color;
     color: $primary-button-text-color;
     border-color: $primary-button-border-color;
-    border-radius: 14px;
-    font-size: 8px;
-    line-height: 12px;
-
-    @media (min-width: 769px) {
-        font-size: 16px;
-        line-height: 24px;
-    }
 
     &:hover {
         color: $primary-button-hover-text-color;
         border-color: $primary-button-hover-border-color;
         background-color: $primary-button-hover-bg-color;
     }
+}
+
+.btn-outline {
+    background-color: $outline-button-bg-color;
+    color: $outline-button-text-color;
+    border-color: $outline-button-border-color;
+
+    &:hover {
+        color: $outline-button-hover-text-color;
+        border-color: $outline-button-hover-border-color;
+        background-color: $outline-button-hover-bg-color;
+    }
+}
+
+.form-control {
+    background-color: $input-field-bg-color;
+    color: $input-field-text-color;
+    border: 1px solid $input-field-border-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $input-field-border-active-color;
+        background-color: $input-field-bg-color;
+    }
+}
+
+.form-link {
+    color: $form-link-color;
+    
+    &:hover {
+        color: $form-link-color;
+        text-decoration: underline;
+    }
+}
+
+label {
+    color: $form-checkbox-color;
 }
 
 $head: navigation;
@@ -171,6 +215,8 @@ $head: navigation;
 
             &__social {
                 &__button {
+                    padding: 4px;
+
                     svg {
                         border-radius: 12px;
                         transition: .3s all ease-in-out;

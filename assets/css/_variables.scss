@@ -28,6 +28,28 @@ $primary-button-hover-border-color: $brand1;
 $primary-button-text-color: $grey-3;
 $primary-button-hover-text-color: $brand1;
 
+// Btutton outline
+$outline-button-bg-color: $transparent;
+$outline-button-border-color: $brand1;
+$outline-button-hover-bg-color: $brand1;
+$outline-button-hover-border-color: $brand1;
+$outline-button-text-color: $brand1;
+$outline-button-hover-text-color: $grey-3;
+
+// Account
+$acc-title-color: $grey-1;
+$acc-text-color: rgba($grey-1, 0.6);
+
+// Form
+$form-link-color: $brand1;
+$form-checkbox-color: $brand1;
+$input-field-bg-color: rgba($grey-1, 0.1);
+$input-field-text-color: rgba($grey-1, 0.6);
+$input-field-border-color: rgba($grey-1, 0.1);
+$input-field-border-active-color: $brand1;
+$form-footer-link-color: rgba($grey-1,0.6);
+$form-footer-text-color: rgba($grey-1,0.6);
+
 //Header
 $headers-bg-color: $grey-3;
 $header-mobile-bg-color: $grey-1;
