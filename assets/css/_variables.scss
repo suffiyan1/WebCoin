@@ -10,6 +10,10 @@ $font-weight-black: 800;
 // Brand
 $brand1: #FFBB54;
 $brand2: #E5E5E5;
+$brand3: #DFE23A;
+$brand4: #E23A45;
+
+
 
 
 // Grey
@@ -49,9 +53,14 @@ $input-field-border-color: rgba($grey-1, 0.1);
 $input-field-border-active-color: $brand1;
 $form-footer-link-color: rgba($grey-1,0.6);
 $form-footer-text-color: rgba($grey-1,0.6);
+$form-dividor-color: rgba($grey-1,0.6);
+$form-link-icon-hover-fill-color: $grey-2;
+$form-link-icon-hover-stroke-color: $brand1;
+$form-checkbox-color: $brand1;
+$form-checkbox-label-color: rgba($grey-1,0.6);
 
 //Header
-$headers-bg-color: $grey-3;
+$headers-bg-color: $grey-2;
 $header-mobile-bg-color: $grey-1;
 $header-mobile-wrapper-bg-color: $grey-3;
 $header-logo-color: $grey-1;
@@ -84,7 +93,10 @@ $token-text-color: $grey-1;
 
 // Stats Slider
 $stats-slider-value-border-color: $grey-1;
-$stats-slider-value-text-color: $grey-1;
+$stats-slider-value-text-white-color: $grey-1;
+$stats-slider-value-text-yellow-color: $brand3;
+$stats-slider-value-text-red-color: $brand4;
+$stats-slider-value-text-brand-color: $brand1;
 $stats-slider-value-bg-color: rgba($grey-1, 0.1);
 
 // Footer

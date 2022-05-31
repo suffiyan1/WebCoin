@@ -5,40 +5,43 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/global.css">
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="./assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+  <!-- Custom style/css -->
+  <link rel="stylesheet" href="./assets/css/global.css">
   <title>WebCoin-Home</title>
+  <base href="./"/>
 </head>
 
 <body>
-  <div class="navigation" id="Nav">
+  <!-- Header -->
+  <header class="navigation" id="Nav">
     <div class="container">
-      <nav class="navbar navbar-expand-md navigation__wrapper">
-        <a class="navbar-brand navigation__wrapper__brand" href="#">LOGO</a>
-        <button class="navbar-toggler navigation__wrapper__toggler" type="button" data-toggle="collapse"
-          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      <nav class="navbar navbar-expand-lg navigation__wrapper">
+        <a class="navbar-brand navigation__brand" href="#">LOGO</a>
+        <button class="navbar-toggler navigation__toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
           aria-label="Toggle navigation">
-          <span class="navigation__wrapper__toggler__icon"></span>
+          <span class="navigation__icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse navigation__wrapper__navbar" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto navigation__wrapper__navbar__nav">
-            <li class="nav-item active navigation__wrapper__navbar__nav__nav-item">
-              <a class="nav-link navigation__wrapper__navbar__nav__item__link" href="#">Feature</a>
+        <div class="collapse navbar-collapse navigation__navbar pe-0" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item active">
+              <a class="nav-link navigation__link" href="#">Feature</a>
             </li>
-            <li class="nav-item navigation__wrapper__navbar__nav__item">
-              <a class="nav-link navigation__wrapper__navbar__nav__item__link" href="#">Pricing</a>
+            <li class="nav-item">
+              <a class="nav-link navigation__link" href="#">Pricing</a>
             </li>
-            <li class="nav-item navigation__wrapper__navbar__nav__item">
-              <a class="nav-link navigation__wrapper__navbar__nav__item__link" href="#">Blog</a>
+            <li class="nav-item">
+              <a class="nav-link navigation__link" href="#">Blog</a>
             </li>
-            <li class="nav-item navigation__wrapper__navbar__nav__item">
-              <a class="nav-link navigation__wrapper__navbar__nav__item__link" href="#">Contact Us</a>
+            <li class="nav-item">
+              <a class="nav-link navigation__link" href="#">Contact Us</a>
             </li>
           </ul>
-          <div class="navigation__wrapper__navbar__social my-2 my-lg-0">
-            <button class="btn my-2 my-sm-0 navigation__wrapper__navbar__social__button" type="submit">
+          <div class="my-2 my-lg-0">
+            <button class="btn my-2 my-sm-0 navigation__button" type="submit">
               <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M29.4893 21.6361H30.9386V19.1118C30.6886 19.0774 29.8287 19 28.8271 19C26.7375 19 25.306 20.3144 25.306 22.7302V24.9535H23V27.7754H25.306V34.876H28.1332V27.7761H30.3459L30.6972 24.9541H28.1326V23.01C28.1332 22.1944 28.3528 21.6361 29.4893 21.6361Z"
@@ -47,7 +50,7 @@
                   stroke-width="1.5" />
               </svg>
             </button>
-            <button class="btn my-2 my-sm-0 navigation__wrapper__navbar__social__button" type="submit">
+            <button class="btn my-2 my-sm-0 navigation__button" type="submit">
               <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M36.5556 20.881C35.8283 21.2 35.0534 21.4114 34.2456 21.5141C35.0767 21.0179 35.711 20.2381 36.0092 19.2982C35.2343 19.7602 34.3788 20.0866 33.467 20.2687C32.7312 19.4852 31.6826 19 30.5386 19C28.319 19 26.5321 20.8016 26.5321 23.0101C26.5321 23.3279 26.559 23.6334 26.625 23.9243C23.292 23.7618 20.3428 22.1643 18.3616 19.7309C18.0157 20.331 17.8128 21.0179 17.8128 21.7573C17.8128 23.1458 18.5278 24.3766 19.5936 25.0891C18.9494 25.0769 18.3176 24.8899 17.7822 24.5953C17.7822 24.6076 17.7822 24.6234 17.7822 24.6393C17.7822 26.5876 19.1719 28.2058 20.9942 28.5786C20.6679 28.6678 20.3122 28.7106 19.9431 28.7106C19.6864 28.7106 19.4273 28.6959 19.1841 28.6421C19.7036 30.2298 21.1776 31.397 22.9302 31.4349C21.5662 32.5019 19.8343 33.1448 17.9594 33.1448C17.6307 33.1448 17.3153 33.1301 17 33.0898C18.7759 34.235 20.8806 34.8889 23.1502 34.8889C30.5276 34.8889 34.5609 28.7778 34.5609 23.4807C34.5609 23.3034 34.5548 23.1323 34.5462 22.9624C35.3419 22.3978 36.0104 21.6926 36.5556 20.881Z"
@@ -56,7 +59,7 @@
                   stroke-width="1.5" />
               </svg>
             </button>
-            <button class="btn my-2 my-sm-0 navigation__wrapper__navbar__social__button" type="submit">
+            <button class="btn my-2 my-sm-0 navigation__button" type="submit">
               <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M24 19H30C32.761 19 35 21.239 35 24V30C35 32.761 32.761 35 30 35H24C21.239 35 19 32.761 19 30V24C19 21.239 21.239 19 24 19ZM30 33.5C31.93 33.5 33.5 31.93 33.5 30V24C33.5 22.07 31.93 20.5 30 20.5H24C22.07 20.5 20.5 22.07 20.5 24V30C20.5 31.93 22.07 33.5 24 33.5H30Z"
@@ -73,63 +76,59 @@
         </div>
       </nav>
     </div>
-  </div>
-
-
-  <div class="home-page">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 home-page__banner">
-          <div class="home-page__banner__wrapper">
-            <span class="home-page__banner__wrapper__sub-heading">LOREM IPSUM DOLOR SIT AMET</span>
-            <h1 class="home-page__banner__wrapper__title">Make Your Crypto Transaction Easier, Plan Your Next Move Here
-            </h1>
-            <p class="home-page__banner__wrapper__text">Learning how
-              cryptocurrency works is like learning a new language. It is incredibly difficult at the beginning, but
-              once
-              it clicks it will stick with you forever</p>
-            <button class="btn btn-primary">Learn more</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 home-page__portfolio-wrapper">
-          <img class="img-fluid home-page__portfolio-wrapper__image" src="./assets/images/Portfolio Tracker.png"
-            alt="Protfolio">
+  </header>
+  <!-- Main Banner -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-xl-10 offset-xl-1 banner">
+        <div class="banner__wrapper">
+          <span class="banner__sub-heading">LOREM IPSUM DOLOR SIT AMET</span>
+          <h1 class="banner__title">Make Your Crypto Transaction Easier, Plan Your Next Move Here
+          </h1>
+          <p class="banner__text">Learning how
+            cryptocurrency works is like learning a new language. It is incredibly difficult at the beginning, but
+            once
+            it clicks it will stick with you forever</p>
+          <button class="btn btn-primary">Learn more</button>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="home-page__stats">
+  <!-- Portfolio image -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-xl-10 offset-xl-1 portfolio-wrapper">
+        <img class="img-fluid portfolio-wrapper__image" src="assets/images/Portfolio Tracker.png" alt="Protfolio">
+      </div>
+    </div>
+  </div>
+  <!-- Stats Section -->
+  <div class="stats">
     <div class="container">
       <div class="row">
-        <div class="col-10 offset-1 home-page__stats__col">
-          <span class="home-page__stats__sub-heading">LOREM IPSUM DOLOR SIT AMET</span>
-          <h2 class="home-page__stats__title">why crypto are a big opportunity to became rich</h2>
-          <p class="home-page__stats__text">Investing in crypto asset can help you to have potential to grow bigger and
+        <div class="col-10 offset-1 stats__col">
+          <span class="stats__sub-heading">LOREM IPSUM DOLOR SIT AMET</span>
+          <h2 class="stats__title">why crypto are a big opportunity to became rich</h2>
+          <p class="stats__text">Investing in crypto asset can help you to have potential to grow bigger and
             faster.
             Plan your next move because every step contributes towards your goal</p>
-          <div class="home-page__stats__wrapper">
-            <div class="home-page__stats__wrapper__bg">
-              <div class="home-page__stats__wrapper__value">
-                <h3 class="home-page__stats__wrapper__value__title">21532</h3>
-                <p class="home-page__stats__wrapper__value__text">Registered users</p>
+          <div class="stats__wrapper">
+            <div class="stats__bg">
+              <div class="stats__value">
+                <h3 class="stats__value__title">21532</h3>
+                <p class="stats__value__text">Registered users</p>
               </div>
             </div>
-            <div class="home-page__stats__wrapper__bg">
-              <div class="home-page__stats__wrapper__value">
-                <h3 class="home-page__stats__wrapper__value__title">22149</h3>
-                <p class="home-page__stats__wrapper__value__text">Mining power</p>
+            <div class="stats__bg">
+              <div class="stats__value">
+                <h3 class="stats__value__title">22149</h3>
+                <p class="stats__value__text">Mining power</p>
               </div>
             </div>
-            <div class="home-page__stats__wrapper__bg">
-              <div class="home-page__stats__wrapper__value">
-                <h3 class="home-page__stats__wrapper__value__title">45867.11</h3>
-                <p class="home-page__stats__wrapper__value__text">Total Deposit</p>
+            <div class="stats__bg">
+              <div class="stats__value">
+                <h3 class="stats__value__title">45867.11</h3>
+                <p class="stats__value__text">Total Deposit</p>
               </div>
             </div>
           </div>
@@ -137,193 +136,214 @@
       </div>
     </div>
   </div>
-
-  <div class="home-page__token">
+  <!-- Token Info Section -->
+  <div class="token token--token">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 home-page__token__col">
-          <span class="home-page__token__sub-heading">LOREM IPSUM DOLOR SIT AMET</span>
-          <h2 class="home-page__token__title">tokens we always recommend</h2>
-          <p class="home-page__token__text">Investing in crypto asset can help you to have potential to grow bigger and
+        <div class="col-12 col-xl-10 offset-xl-1 token__col">
+          <span class="token__sub-heading">LOREM IPSUM DOLOR SIT AMET</span>
+          <h2 class="token__title">tokens we always recommend</h2>
+          <p class="token__text">Investing in crypto asset can help you to have potential to grow bigger and
             faster.
             Plan your next move because every step contributes towards your goal</p>
-          <img class=" img-fluid home-page__token__image" src="./assets/images/token-image.png" alt="">
+          <img class=" img-fluid token__image" src="assets/images/token-image.png" alt="">
         </div>
       </div>
     </div>
   </div>
-
-  <div class="home-page__stats-slider">
-    <div class="home-page__stats-slider__wrapper">
-      <div class="home-page__stats-slider__wrapper__bg">
-        <div class="home-page__stats-slider__wrapper__value">
-          <h3 class="home-page__stats-slider__wrapper__value__title">21532</h3>
-          <p class="home-page__stats-slider__wrapper__value__text">Registered users</p>
+  <!-- Stats Slider Section -->
+  <div class="stats-slider">
+    <div class="stats-slider__wrapper">
+      <div class="stats-slider__animate1">
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
+        </div>
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="red">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
+        </div>
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
+        </div>
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
         </div>
       </div>
-      <div class="home-page__stats-slider__wrapper__bg">
-        <div class="home-page__stats-slider__wrapper__value">
-          <h3 class="home-page__stats-slider__wrapper__value__title">22149</h3>
-          <p class="home-page__stats-slider__wrapper__value__text">Mining power</p>
+      <div class="stats-slider__animate1">
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="red">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
         </div>
-      </div>
-      <div class="home-page__stats-slider__wrapper__bg">
-        <div class="home-page__stats-slider__wrapper__value">
-          <h3 class="home-page__stats-slider__wrapper__value__title">45867.11</h3>
-          <p class="home-page__stats-slider__wrapper__value__text">Total Deposit</p>
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="red">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
         </div>
-      </div>
-      <div class="home-page__stats-slider__wrapper__bg">
-        <div class="home-page__stats-slider__wrapper__value">
-          <h3 class="home-page__stats-slider__wrapper__value__title">45867.11</h3>
-          <p class="home-page__stats-slider__wrapper__value__text">Total Deposit</p>
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
         </div>
-      </div>
-      <div class="home-page__stats-slider__wrapper__bg">
-        <div class="home-page__stats-slider__wrapper__value">
-          <h3 class="home-page__stats-slider__wrapper__value__title">45867.11</h3>
-          <p class="home-page__stats-slider__wrapper__value__text">Total Deposit</p>
-        </div>
-      </div>
-    </div>
-    <div class="home-page__stats-slider__wrapper">
-      <div class="home-page__stats-slider__wrapper__bg">
-        <div class="home-page__stats-slider__wrapper__value">
-          <h3 class="home-page__stats-slider__wrapper__value__title">21532</h3>
-          <p class="home-page__stats-slider__wrapper__value__text">Registered users</p>
-        </div>
-      </div>
-      <div class="home-page__stats-slider__wrapper__bg">
-        <div class="home-page__stats-slider__wrapper__value">
-          <h3 class="home-page__stats-slider__wrapper__value__title">22149</h3>
-          <p class="home-page__stats-slider__wrapper__value__text">Mining power</p>
-        </div>
-      </div>
-      <div class="home-page__stats-slider__wrapper__bg">
-        <div class="home-page__stats-slider__wrapper__value">
-          <h3 class="home-page__stats-slider__wrapper__value__title">45867.11</h3>
-          <p class="home-page__stats-slider__wrapper__value__text">Total Deposit</p>
-        </div>
-      </div>
-      <div class="home-page__stats-slider__wrapper__bg">
-        <div class="home-page__stats-slider__wrapper__value">
-          <h3 class="home-page__stats-slider__wrapper__value__title">45867.11</h3>
-          <p class="home-page__stats-slider__wrapper__value__text">Total Deposit</p>
-        </div>
-      </div>
-      <div class="home-page__stats-slider__wrapper__bg">
-        <div class="home-page__stats-slider__wrapper__value">
-          <h3 class="home-page__stats-slider__wrapper__value__title">45867.11</h3>
-          <p class="home-page__stats-slider__wrapper__value__text">Total Deposit</p>
-        </div>
-      </div>
-      <div class="home-page__stats-slider__wrapper__bg">
-        <div class="home-page__stats-slider__wrapper__value">
-          <h3 class="home-page__stats-slider__wrapper__value__title">45867.11</h3>
-          <p class="home-page__stats-slider__wrapper__value__text">Total Deposit</p>
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="red">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="home-page__token home-page__token--bot">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 home-page__token__col">
-          <span class="home-page__token__sub-heading">LOREM IPSUM DOLOR SIT AMET</span>
-          <h2 class="home-page__token__title">tokens we always recommend</h2>
-          <img class=" img-fluid home-page__token__image" src="./assets/images/trading-bot.png" alt="">
-          <p class="home-page__token__text">Investing in crypto asset can help you to have potential to grow bigger and
-            faster.
-            Plan your next move because every step contributes towards your goal</p>
+    <div class="stats-slider__wrapper">
+      <div class="stats-slider__animate2">
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
+        </div>
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
+        </div>
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="red">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
+        </div>
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
+        </div>
+      </div>
+      <div class="stats-slider__animate2">
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="red">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
+        </div>
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="red">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
+        </div>
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
+        </div>
+        <div class="stats-slider__value">
+          <h3 class="stats-slider__title">BNB/BUSD <span class="red">-35.23%</span></h3>
+          <p class="stats-slider__text">614.3 <span>$613.75</span></p>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="home-page__token home-page__token--portfolio">
+  <!-- Bots Section -->
+  <div class="token token--bot">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 home-page__token__col">
-          <span class="home-page__token__sub-heading">LOREM IPSUM DOLOR SIT AMET</span>
-          <h2 class="home-page__token__title">tokens we always recommend</h2>
-          <p class="home-page__token__text">Investing in crypto asset can help you to have potential to grow bigger and
-            faster.
-            Plan your next move because every step contributes towards your goal</p>
-          <img class=" img-fluid home-page__token__image" src="./assets/images/portfolio history.png" alt="">
-          <p class="home-page__token__text">Investing in crypto asset can help you to have potential to grow bigger and
-            faster.
-            Plan your next move because every step contributes towards your goal</p>
+        <div class="col-12 col-xl-10 offset-xl-1 token__col">
+          <span class="token__sub-heading">LOREM IPSUM DOLOR SIT AMET</span>
+          <h2 class="token__title">The AutoTrading bot</h2>
+          <img class=" img-fluid token__image" src="./assets/images/trading-bot.png" alt="">
+          <p class="token__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit, nulla non
+            felis. Purus vestibulum risus vivamus id. Sagittis, viverra enim blandit id consectetur tortor egestas. Nisi
+            egestas consequat aenean pellentesque quis scelerisque facilisi at enim. Risus quam risus tempus imperdiet.
+          </p>
           <button class="btn btn-primary">Get in touch</button>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="footer">
+  <!-- Portfolio detail section -->
+  <div class="token token--portfolio">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-10 offset-md-1">
-          <a class="navbar-brand navigation__wrapper__brand" href="#">LOGO</a>
+        <div class="col-12 col-xl-10 offset-xl-1 token__col">
+          <span class="token__sub-heading">LOREM IPSUM DOLOR SIT AMET</span>
+          <h2 class="token__title">The portfolio History</h2>
+          <p class="token__text">Investing in crypto asset can help you to have potential to grow bigger and faster.
+            Plan your next move because every step contributes towards your goal</p>
+          <img class=" img-fluid token__image" src="assets/images/portfolio history.png" alt="">
+          <p class="token__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit, nulla non
+            felis. Purus vestibulum risus vivamus id. Sagittis, viverra enim blandit id consectetur tortor egestas. Nisi
+            egestas consequat aenean pellentesque quis scelerisque facilisi at enim. Risus quam risus tempus imperdiet.
+          </p>
+          <button class="btn btn-primary">Search Portfolio</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container px-xl-0">
+      <div class="row">
+        <div class="col-12 col-xl-10 offset-xl-1 px-xl-0">
+          <a class="navbar-brand navigation__brand" href="#">LOGO</a>
           <div class="row">
-            <div class="col-12 col-md-7">
+            <div class="col-12 col-xl-7">
               <div class="row">
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-xl-3">
                   <a href="#" class="footer__link">Email Marketing</a>
                 </div>
-                <div class="col-6 offset-md-0 col-md-3">
+                <div class="col-6 offset-xl-0 col-xl-3">
                   <a href="#" class="footer__link">Campaigns</a>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-xl-3">
                   <a href="#" class="footer__link">Branding</a>
                 </div>
-                <div class="col-6 offset-md-0 col-md-3">
+                <div class="col-6 offset-xl-0 col-xl-3">
                   <a href="#" class="footer__link">Offline</a>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-xl-3">
                   <a href="#" class="footer__link">Our Story</a>
                 </div>
-                <div class="col-6 offset-md-0 col-md-3">
+                <div class="col-6 offset-xl-0 col-xl-3">
                   <a href="#" class="footer__link">Benefits</a>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-xl-3">
                   <a href="#" class="footer__link">Team</a>
                 </div>
-                <div class="col-6 offset-md-0 col-md-3">
+                <div class="col-6 offset-xl-0 col-xl-3">
                   <a href="#" class="footer__link">Careers</a>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-xl-3">
                   <a href="#" class="footer__link">FAQ</a>
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-5">
+            <!-- Social Icons Secrion -->
+            <div class="col-12 col-xl-5">
               <div class="footer__social">
-                <a href="#" class="footer__social__icon"><svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.52006 2.63607H7.96941V0.111793C7.71936 0.0773953 6.85941 0 5.8579 0C3.76823 0 2.33675 1.3144 2.33675 3.73019V5.95349H0.0307617V8.77544H2.33675V15.876H5.16399V8.7761H7.3767L7.72796 5.95415H5.16333V4.01C5.16399 3.19438 5.38361 2.63607 6.52006 2.63607Z" fill="white"/>
+                <a href="#" class="footer__social__icon"><svg width="8" height="16" viewBox="0 0 8 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.52006 2.63607H7.96941V0.111793C7.71936 0.0773953 6.85941 0 5.8579 0C3.76823 0 2.33675 1.3144 2.33675 3.73019V5.95349H0.0307617V8.77544H2.33675V15.876H5.16399V8.7761H7.3767L7.72796 5.95415H5.16333V4.01C5.16399 3.19438 5.38361 2.63607 6.52006 2.63607Z"
+                      fill="white" />
                   </svg>
-                  </a>
-                <a href="#" class="footer__social__icon"><svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19.5556 1.881C18.8283 2.2 18.0534 2.41144 17.2456 2.51411C18.0767 2.01789 18.711 1.23811 19.0092 0.298222C18.2343 0.760222 17.3788 1.08656 16.467 1.26867C15.7312 0.485222 14.6826 0 13.5386 0C11.319 0 9.53211 1.80156 9.53211 4.01011C9.53211 4.32789 9.559 4.63344 9.625 4.92433C6.292 4.76178 3.34278 3.16433 1.36156 0.730889C1.01567 1.331 0.812778 2.01789 0.812778 2.75733C0.812778 4.14578 1.52778 5.37656 2.59356 6.08911C1.94944 6.07689 1.31756 5.88989 0.782222 5.59533C0.782222 5.60756 0.782222 5.62344 0.782222 5.63933C0.782222 7.58756 2.17189 9.20578 3.99422 9.57856C3.66789 9.66778 3.31222 9.71056 2.94311 9.71056C2.68644 9.71056 2.42733 9.69589 2.18411 9.64211C2.70356 11.2298 4.17756 12.397 5.93022 12.4349C4.56622 13.5019 2.83433 14.1448 0.959444 14.1448C0.630667 14.1448 0.315333 14.1301 0 14.0898C1.77589 15.235 3.88056 15.8889 6.15022 15.8889C13.5276 15.8889 17.5609 9.77778 17.5609 4.48067C17.5609 4.30344 17.5548 4.13233 17.5462 3.96244C18.3419 3.39778 19.0104 2.69256 19.5556 1.881Z" fill="white"/>
+                </a>
+                <a href="#" class="footer__social__icon"><svg width="20" height="16" viewBox="0 0 20 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M19.5556 1.881C18.8283 2.2 18.0534 2.41144 17.2456 2.51411C18.0767 2.01789 18.711 1.23811 19.0092 0.298222C18.2343 0.760222 17.3788 1.08656 16.467 1.26867C15.7312 0.485222 14.6826 0 13.5386 0C11.319 0 9.53211 1.80156 9.53211 4.01011C9.53211 4.32789 9.559 4.63344 9.625 4.92433C6.292 4.76178 3.34278 3.16433 1.36156 0.730889C1.01567 1.331 0.812778 2.01789 0.812778 2.75733C0.812778 4.14578 1.52778 5.37656 2.59356 6.08911C1.94944 6.07689 1.31756 5.88989 0.782222 5.59533C0.782222 5.60756 0.782222 5.62344 0.782222 5.63933C0.782222 7.58756 2.17189 9.20578 3.99422 9.57856C3.66789 9.66778 3.31222 9.71056 2.94311 9.71056C2.68644 9.71056 2.42733 9.69589 2.18411 9.64211C2.70356 11.2298 4.17756 12.397 5.93022 12.4349C4.56622 13.5019 2.83433 14.1448 0.959444 14.1448C0.630667 14.1448 0.315333 14.1301 0 14.0898C1.77589 15.235 3.88056 15.8889 6.15022 15.8889C13.5276 15.8889 17.5609 9.77778 17.5609 4.48067C17.5609 4.30344 17.5548 4.13233 17.5462 3.96244C18.3419 3.39778 19.0104 2.69256 19.5556 1.881Z"
+                      fill="white" />
                   </svg>
-                  </a>
-                <a href="#" class="footer__social__icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5 0H11C13.761 0 16 2.239 16 5V11C16 13.761 13.761 16 11 16H5C2.239 16 0 13.761 0 11V5C0 2.239 2.239 0 5 0ZM11 14.5C12.93 14.5 14.5 12.93 14.5 11V5C14.5 3.07 12.93 1.5 11 1.5H5C3.07 1.5 1.5 3.07 1.5 5V11C1.5 12.93 3.07 14.5 5 14.5H11Z" fill="white"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4 8C4 5.791 5.791 4 8 4C10.209 4 12 5.791 12 8C12 10.209 10.209 12 8 12C5.791 12 4 10.209 4 8ZM5.5 8C5.5 9.378 6.622 10.5 8 10.5C9.378 10.5 10.5 9.378 10.5 8C10.5 6.621 9.378 5.5 8 5.5C6.622 5.5 5.5 6.621 5.5 8Z" fill="white"/>
-                  <circle cx="12.3001" cy="3.70097" r="0.533" fill="white"/>
+                </a>
+                <a href="#" class="footer__social__icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5 0H11C13.761 0 16 2.239 16 5V11C16 13.761 13.761 16 11 16H5C2.239 16 0 13.761 0 11V5C0 2.239 2.239 0 5 0ZM11 14.5C12.93 14.5 14.5 12.93 14.5 11V5C14.5 3.07 12.93 1.5 11 1.5H5C3.07 1.5 1.5 3.07 1.5 5V11C1.5 12.93 3.07 14.5 5 14.5H11Z"
+                      fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4 8C4 5.791 5.791 4 8 4C10.209 4 12 5.791 12 8C12 10.209 10.209 12 8 12C5.791 12 4 10.209 4 8ZM5.5 8C5.5 9.378 6.622 10.5 8 10.5C9.378 10.5 10.5 9.378 10.5 8C10.5 6.621 9.378 5.5 8 5.5C6.622 5.5 5.5 6.621 5.5 8Z"
+                      fill="white" />
+                    <circle cx="12.3001" cy="3.70097" r="0.533" fill="white" />
                   </svg>
-                  </a>
+                </a>
               </div>
             </div>
           </div>
+          <!-- Copyright and Terms Condition -->
           <div class="row mt-4">
-            <div class="col-12 col-md-8 order-1 order-md-0">
+            <div class="col-12 col-xl-8 order-1 order-xl-0">
               <p class="footer__copyright">Copyright © 2020. LogoIpsum. All rights reserved.</p>
             </div>
-            <div class="col-12 col-md-4 order-0 order-md-1 mb-4 mb-md-0">
+            <div class="col-12 col-xl-4 order-0 order-xl-1 mb-4 mb-xl-0">
               <div class="row">
-                <div class="col-12 col-md-7 mb-2 mb-md-0"><a href="#" class="footer__terms">Terms & Conditions</a></div>
-                <div class="col-12 col-md-5"><a href="#" class="footer__terms">Privacy Policy</a></div>
+                <div class="col-12 col-xl-7 mb-2 mb-xl-0"><a href="#" class="footer__terms">Terms & Conditions</a></div>
+                <div class="col-12 col-xl-5"><a href="#" class="footer__terms">Privacy Policy</a></div>
               </div>
             </div>
           </div>
@@ -332,16 +352,9 @@
     </div>
   </div>
 
-  <script src="./assets/js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-    integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
