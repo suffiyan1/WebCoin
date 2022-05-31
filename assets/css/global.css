@@ -1389,37 +1389,45 @@ label {
 
 @-webkit-keyframes animate2 {
   0% {
-    left: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   100% {
-    left: -100%;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
 @keyframes animate2 {
   0% {
-    left: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   100% {
-    left: -100%;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
 @-webkit-keyframes animate22 {
   0% {
-    left: 0%;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   100% {
-    left: -100%;
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
   }
 }
 
 @keyframes animate22 {
   0% {
-    left: 0%;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   100% {
-    left: -100%;
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
   }
 }
 /*# sourceMappingURL=global.css.map */
