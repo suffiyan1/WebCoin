@@ -1,0 +1,17 @@
+{
+  "name": "WebCoin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
+    "sass": "^1.52.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "scss": "sass assets/scss/global.scss:assets/css/global.css --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
