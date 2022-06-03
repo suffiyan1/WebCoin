@@ -5,43 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap 5 -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-    <!-- Custom style/css -->
-    <link rel="stylesheet" href="../assets/css/global.css">
+    <!-- Bootstrap 5 + Custom style -->
+    <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.css">
     <title>WebCoin-Login</title>
-    <base href="../"/>
+    <base href="../" />
 </head>
 
 <body class="account">
     <!-- Header -->
     <header class="navigation" id="Nav">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navigation__wrapper">
-                <a class="navbar-brand navigation__brand" href="#">LOGO</a>
-                <button class="navbar-toggler navigation__toggler" type="button" data-bs-toggle="collapse"
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">LOGO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navigation__icon"></span>
+                    <span class="icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse navigation__navbar pe-0" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse pe-0" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item active">
-                            <a class="nav-link navigation__link" href="#">Feature</a>
+                            <a class="nav-link link" href="#">Feature</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link navigation__link" href="#">Pricing</a>
+                            <a class="nav-link link" href="#">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link navigation__link" href="#">Blog</a>
+                            <a class="nav-link link" href="#">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link navigation__link" href="#">Contact Us</a>
+                            <a class="nav-link link" href="#">Contact Us</a>
                         </li>
                     </ul>
                     <div class="my-2 my-lg-0">
-                        <button class="btn my-2 my-sm-0 navigation__button" type="submit">
+                        <button class="btn my-2 my-sm-0 button" type="submit">
                             <svg width="54" height="54" viewBox="0 0 54 54" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -51,7 +49,7 @@
                                     stroke="#FFBB54" stroke-width="1.5" />
                             </svg>
                         </button>
-                        <button class="btn my-2 my-sm-0 navigation__button" type="submit">
+                        <button class="btn my-2 my-sm-0 button" type="submit">
                             <svg width="54" height="54" viewBox="0 0 54 54" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -61,7 +59,7 @@
                                     stroke="#FFBB54" stroke-width="1.5" />
                             </svg>
                         </button>
-                        <button class="btn my-2 my-sm-0 navigation__button" type="submit">
+                        <button class="btn my-2 my-sm-0 button" type="submit">
                             <svg width="54" height="54" viewBox="0 0 54 54" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -86,31 +84,45 @@
             <div class="col-12 col-lg-8 offset-lg-2">
                 <div class="account">
                     <div>
-                        <h2 class="account__title">Login to Your Account</h2>
-                        <p class="account__text">Your Own Digital Campaign</p>
-                        <div class="account__link-wrapper">
-                            <button class="btn btn-outline account__link-wrapper__link">
-                                <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="brand" d="M30.0072 16.3114C30.0072 15.1603 29.9119 14.3203 29.7057 13.4492H16.293V18.6447H24.1659C24.0072 19.9359 23.1501 21.8803 21.2453 23.1869L21.2186 23.3609L25.4595 26.5805L25.7533 26.6092C28.4516 24.167 30.0072 20.5736 30.0072 16.3114Z" fill="#FFBB54"/>
-                                    <path class="brand" d="M16.2922 29.9998C20.1492 29.9998 23.3873 28.7553 25.7524 26.6086L21.2445 23.1863C20.0382 24.0108 18.4191 24.5863 16.2922 24.5863C12.5144 24.5863 9.30811 22.1441 8.16515 18.7686L7.99762 18.7825L3.58794 22.127L3.53027 22.2841C5.87945 26.8574 10.7048 29.9998 16.2922 29.9998Z" fill="#FFBB54"/>
-                                    <path class="brand" d="M8.16599 18.769C7.86441 17.8979 7.68987 16.9645 7.68987 16.0001C7.68987 15.0356 7.86441 14.1023 8.15012 13.2312L8.14213 13.0456L3.67718 9.64746L3.5311 9.71556C2.56289 11.6134 2.00732 13.7445 2.00732 16.0001C2.00732 18.2556 2.56289 20.3867 3.5311 22.2845L8.16599 18.769Z" fill="#FFBB54"/>
-                                    <path class="brand" d="M16.2922 7.4133C18.9747 7.4133 20.7842 8.54885 21.816 9.4978L25.8478 5.64C23.3716 3.38445 20.1493 2 16.2922 2C10.7049 2 5.87946 5.1422 3.53027 9.71549L8.14931 13.2311C9.30815 9.85555 12.5145 7.4133 16.2922 7.4133Z" fill="#FFBB54"/>
-                                    </svg>
+                        <h2 class="title">Login to Your Account</h2>
+                        <p class="detail-text">Your Own Digital Campaign</p>
+                        <div class="link-wrapper">
+                            <button class="btn btn-outline link">
+                                <svg width="33" height="32" viewBox="0 0 33 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="brand"
+                                        d="M30.0072 16.3114C30.0072 15.1603 29.9119 14.3203 29.7057 13.4492H16.293V18.6447H24.1659C24.0072 19.9359 23.1501 21.8803 21.2453 23.1869L21.2186 23.3609L25.4595 26.5805L25.7533 26.6092C28.4516 24.167 30.0072 20.5736 30.0072 16.3114Z"
+                                        fill="#FFBB54" />
+                                    <path class="brand"
+                                        d="M16.2922 29.9998C20.1492 29.9998 23.3873 28.7553 25.7524 26.6086L21.2445 23.1863C20.0382 24.0108 18.4191 24.5863 16.2922 24.5863C12.5144 24.5863 9.30811 22.1441 8.16515 18.7686L7.99762 18.7825L3.58794 22.127L3.53027 22.2841C5.87945 26.8574 10.7048 29.9998 16.2922 29.9998Z"
+                                        fill="#FFBB54" />
+                                    <path class="brand"
+                                        d="M8.16599 18.769C7.86441 17.8979 7.68987 16.9645 7.68987 16.0001C7.68987 15.0356 7.86441 14.1023 8.15012 13.2312L8.14213 13.0456L3.67718 9.64746L3.5311 9.71556C2.56289 11.6134 2.00732 13.7445 2.00732 16.0001C2.00732 18.2556 2.56289 20.3867 3.5311 22.2845L8.16599 18.769Z"
+                                        fill="#FFBB54" />
+                                    <path class="brand"
+                                        d="M16.2922 7.4133C18.9747 7.4133 20.7842 8.54885 21.816 9.4978L25.8478 5.64C23.3716 3.38445 20.1493 2 16.2922 2C10.7049 2 5.87946 5.1422 3.53027 9.71549L8.14931 13.2311C9.30815 9.85555 12.5145 7.4133 16.2922 7.4133Z"
+                                        fill="#FFBB54" />
+                                </svg>
                                 Login with Google
                             </button>
-                            <button class="btn btn-outline account__link-wrapper__link">
-                                <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="brand" d="M30.0059 16C30.0059 23.728 23.7409 30 16.0059 30C8.27086 30 2.00586 23.728 2.00586 16C2.00586 8.265 8.27086 2 16.0059 2C23.7409 2 30.0059 8.265 30.0059 16Z" fill="#FFBB54"/>
-                                    <path class="grey" d="M22.568 12.4574C22.4916 12.502 20.6729 13.4425 20.6729 15.5279C20.7586 17.9061 22.968 18.7401 23.0059 18.7401C22.968 18.7847 22.6723 19.8763 21.7965 21.0205C21.1015 22.0062 20.3301 23 19.1586 23C18.0444 23 17.6444 22.3431 16.3586 22.3431C14.9779 22.3431 14.5872 23 13.5301 23C12.3586 23 11.5301 21.953 10.7971 20.9766C9.84496 19.6986 9.03564 17.6931 9.00707 15.7675C8.98781 14.7471 9.19775 13.744 9.73067 12.8921C10.4828 11.7026 11.8257 10.8952 13.2922 10.8686C14.4158 10.8333 15.4158 11.5875 16.1015 11.5875C16.7586 11.5875 17.9872 10.8686 19.3773 10.8686C19.9773 10.8692 21.5773 11.0376 22.568 12.4574ZM16.0065 10.6649C15.8065 9.73303 16.3586 8.80119 16.8729 8.20677C17.5301 7.48792 18.568 7 19.463 7C19.5201 7.93185 19.158 8.84575 18.5108 9.51136C17.9301 10.2302 16.9301 10.7714 16.0065 10.6649Z" fill="#08071B"/>
-                                    </svg>
+                            <button class="btn btn-outline link">
+                                <svg width="33" height="32" viewBox="0 0 33 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="brand"
+                                        d="M30.0059 16C30.0059 23.728 23.7409 30 16.0059 30C8.27086 30 2.00586 23.728 2.00586 16C2.00586 8.265 8.27086 2 16.0059 2C23.7409 2 30.0059 8.265 30.0059 16Z"
+                                        fill="#FFBB54" />
+                                    <path class="grey"
+                                        d="M22.568 12.4574C22.4916 12.502 20.6729 13.4425 20.6729 15.5279C20.7586 17.9061 22.968 18.7401 23.0059 18.7401C22.968 18.7847 22.6723 19.8763 21.7965 21.0205C21.1015 22.0062 20.3301 23 19.1586 23C18.0444 23 17.6444 22.3431 16.3586 22.3431C14.9779 22.3431 14.5872 23 13.5301 23C12.3586 23 11.5301 21.953 10.7971 20.9766C9.84496 19.6986 9.03564 17.6931 9.00707 15.7675C8.98781 14.7471 9.19775 13.744 9.73067 12.8921C10.4828 11.7026 11.8257 10.8952 13.2922 10.8686C14.4158 10.8333 15.4158 11.5875 16.1015 11.5875C16.7586 11.5875 17.9872 10.8686 19.3773 10.8686C19.9773 10.8692 21.5773 11.0376 22.568 12.4574ZM16.0065 10.6649C15.8065 9.73303 16.3586 8.80119 16.8729 8.20677C17.5301 7.48792 18.568 7 19.463 7C19.5201 7.93185 19.158 8.84575 18.5108 9.51136C17.9301 10.2302 16.9301 10.7714 16.0065 10.6649Z"
+                                        fill="#08071B" />
+                                </svg>
                                 Login with Apple</button>
                         </div>
 
-                        <div class="account__dividor">
-                            <span class="account__dividor__text">OR</span>
+                        <div class="dividor">
+                            <span class="text">OR</span>
                         </div>
 
-                        <form class="account__form" action="">
+                        <form class="form" action="">
                             <div class="form-group mb-3">
                                 <input class="form-control" type="email" name="email" id="email"
                                     placeholder="Emain Address">
@@ -120,31 +132,32 @@
                                     placeholder="Password">
                             </div>
 
-                            <div class="account__chekbox-forgot">
+                            <div class="chekbox-forgot">
                                 <div class="form-group form-check">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                     <label class="form-check-label" for="exampleCheck1">Remember me</label>
                                 </div>
 
-                                <a href="#" class="account__forgot form-link">Forget Password?</a>
+                                <a href="#" class="forgot form-link">Forget Password?</a>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Create Your Account</button>
                         </form>
-                        <p class="account__sub-text">Not a member yet? <a href="#" class="form-link">Register Now</a></p>
+                        <p class="sub-text">Not a member yet? <a href="#" class="form-link">Register Now</a>
+                        </p>
                     </div>
 
-                    <div class="account__footer">
-                        <a href="#" class="account__footer__link">Privacy Policy</a>
-                        <p class="account__footer__text">Copyright 2022</p>
+                    <div class="account-footer">
+                        <a href="#" class="link">Privacy Policy</a>
+                        <p class="text">Copyright 2022</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="assets/bootstrap/dist/js/custom.js"></script>
 </body>
 
 </html>
