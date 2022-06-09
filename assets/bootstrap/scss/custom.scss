@@ -16,37 +16,95 @@ body {
     font-size: 16px;
     font-weight: $font-weight-normal;
     background-color: $grey-2;
-    background-image: url("../../../images/banner-bg-right.svg"), url("../../../images/banner-bg-left.svg");
+    background-image: url("../../../images/banner-bg-right.svg"), url("../../../images/banner-bg-left2.svg");
     background-repeat: no-repeat;
-    background-position: 100px 0%, 0% 0%;
-    background-size: 100%;
+    background-position: 125% 2%, 0% 0%;
+    background-size: 50%, 40%;
+    transition: .2s all ease-in-out;
 
-    @media (min-width: 992px) {
+    @media (min-width: 1280px) {
         background-position: right 0%, left 0%;
         background-size: 50%;
     }
     // style backgoround for account pages
     &.account {
-        background-position: 100px 0%, 0% 0%;
-        background-size: 100%;
+        background-image: url("../../../images/banner-bg-right2.svg"), url("../../../images/banner-bg-left.svg"), url("../../../images/banner-bg-right1.svg");
+        background-position: 125% 80%, 0% 0%, 100% 200%;
+        background-size: 50%, 40%, 50%;
+        height: 100vh;
 
         @media (min-width: 992px) {
-            background-position: 140% 0%, left 0%;
-            background-size: 50%;
+            background-position: 105% 0%, 0% 0%, 100% 100vh;
+            background-size: 30%, 20%, 20%;
         }
-    }
-    // when page scrolls
-    &.bodyup {
-        margin-top: 150px;
+
+        .navigation {
+            .navbar-collapse {
+                top: 70px;
+                min-height: 514px;
+
+                @media (min-width:992px) {
+                    top: 0;
+                min-height: auto;
+
+                }
+            }
+        }
+        // Brand icon for account pages
+        .navbar-brand {
+            font-family: $font-family-primary;
+            color: $header-logo-color;
+            font-size: 32.15px;
+            line-height: 44px;
+            font-weight: $font-weight-black;
+
+            // Brand hover effect
+            &:hover {
+                color: $header-logo-color;
+                opacity: 0.7;
+            }
+        }
+        // Toggler button style for account pages
+        .navbar-toggler {
+            padding: 17px ;
+            background-color: $acc-toggler-button-bg;
+            border-radius: 16px;
+
+            @media (min-width: 992px) {
+                padding: 0;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .btn.btn-outline {
+            padding: 18px;
+            border-radius: 14px;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: $font-weight-normal;
+
+            @media (min-width: 992px) {
+                padding: 17px;
+                font-size: 14px;
+                line-height: 21px;
+            }
+
+            &.link {
+                padding: 13.5px;
+
+                @media (min-width: 992px) {
+                    padding: 13px;
+                }
+            }
+        }
     }
 }
 
 a {
     text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
 }
 // default style to remove margin bottom
 h1,h2,h3,h4,h5,h6,p {
@@ -84,14 +142,15 @@ div[class*="col-"] {
 }
 // overide bootstrap
 .btn {
-    padding: 7px 17px;
-    border-radius: 14px;
-    font-size: 8px;
-    line-height: 12px;
+    padding: 7.77px 17.62px;
+    border-radius: 7.33px;
+    font-size: 8.29px;
+    line-height: 12.44px;
     font-weight: $font-weight-semibold;
 
     @media (min-width: 992px) {
-        padding: 14px 34px;
+        border-radius: 14px;
+        padding: 15px 34px;
         font-size: 16px;
         line-height: 24px;
     }
@@ -99,17 +158,53 @@ div[class*="col-"] {
     &:focus {
         box-shadow: none;
     }
+
+    &:before {
+        border-radius: 7.33px;
+
+        @media (min-width:992px) {
+            border-radius: 14px;
+        }
+    }
 }
 // overide bootstrap
 .btn-primary {
     background-color: $primary-button-bg-color;
     color: $primary-button-text-color;
     border-color: $primary-button-border-color;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: $primary-button-bg-hover-color;
+        transition: .5s all ease-in-out;
+    }
 
+    &:focus,
     &:hover {
-        color: $primary-button-hover-text-color;
-        border-color: $primary-button-hover-border-color;
-        background-color: $primary-button-hover-bg-color;
+        background-color: $primary-button-bg-color;
+        color: $primary-button-text-color;
+        border-color: $primary-button-border-color;
+        &:before {
+            width: 100%;
+        }
+    }
+
+    // &:hover {
+    //     color: $primary-button-hover-text-color;
+    //     border-color: $primary-button-hover-border-color;
+    //     background-color: $primary-button-hover-bg-color;
+    // }
+
+    &:active {
+        box-shadow: none;
+        &:focus {
+            box-shadow: none;
+        }
     }
 }
 // overide bootstrap
@@ -129,15 +224,24 @@ div[class*="col-"] {
     background-color: $input-field-bg-color;
     color: $input-field-text-color;
     border: 1px solid $input-field-border-color;
-    padding: 12px 20px;
+    padding: 13.3px 20px;
+    border-radius: 6.03px;
+    font-size: 14px;
+    line-height: 21px;
 
     @media (min-width:992px) {
+        border-radius: 10px;
         padding: 17px 34px;
+    }
+
+    &::placeholder {
+        color: $input-field-text-color;
     }
 
     &:hover,
     &:focus,
-    &:active {
+    &:active,
+    &:focus-visible {
         border-color: $input-field-border-active-color;
         background-color: $input-field-bg-color;
         color: $input-field-text-color;
@@ -159,6 +263,7 @@ label {
 }
 // overide bootstrap
 .form-check-input {
+    background-color: $form-checkbox-bg-color;
     &:checked {
         border-color: transparent;
         background-color: transparent;
@@ -168,10 +273,28 @@ label {
     }
     &:focus {
         box-shadow: none;
+        outline: none;
+        border-color: transparent;
     }
 }
 // Header
 .navigation {
+    padding-top: 36px;
+    padding-bottom: 18px;
+    transition: none;
+
+    @media (min-width: 992px) {
+        transition: .2s all ease-in-out;
+        padding-bottom: 0;
+        padding-top: 0;
+        margin-top: 36px;
+    }
+
+    &.active {
+        background-color: $headers-bg-color;
+    }
+
+
     // when pag detect scroll, to fix the header
     &.sticky {
         background-color: $headers-bg-color;
@@ -180,16 +303,8 @@ label {
         top: 0;
         z-index: 999;
         margin-top: 0;
-
-        .navbar-collapse {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
     }
 
-    @media (min-width: 992px) {
-        margin-top: 16px;
-    }
     // brand Logo style
     .navbar-brand {
         font-family: $font-family-primary;
@@ -197,6 +312,7 @@ label {
         font-size: 14px;
         line-height: 22px;
         font-weight: $font-weight-black;
+        margin-right: 0;
 
         @media (min-width: 992px) {
             font-size: 36px;
@@ -210,19 +326,30 @@ label {
     }
     // Hamburger button for mobile
     .navbar-toggler {
-        padding: 18px 0 18px 18px;
+        padding: 0;
 
         &:focus {
             box-shadow: none;
         }
-    }
-    // Hamburger icon for mobile
-    .icon {
-        background-image: url("../../../images/icons/hamburger.svg");
-        background-repeat: no-repeat;
-        width: 24px;
-        height: 24px;
-        display: inline-block;
+
+        // Hamburger icon for mobile
+        .icon {
+            background-image: url("../../../images/icons/hamburger.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+            display: block;
+        }
+
+        &.active {
+            // cross icon for mobile
+            .icon {
+                background-image: url("../../../images/icons/cross.svg");
+                background-position: center 50%;
+
+            }
+        }
     }
 
     .navbar {
@@ -237,12 +364,13 @@ label {
         left: -30px;
         text-align: center;
         z-index: 9;
-        padding: 20px 20px 20px 0;
+        padding: 20px;
+
 
         @media (min-width: 992px) {
-            padding: 20px;
+            padding: 0 0 0 23px;
             position: relative;
-            margin-left: 30px;
+            margin-left: 68px;
             top: 0;
             background-color: transparent;
             width: 100%;
@@ -269,6 +397,10 @@ label {
         font-weight: $font-weight-normal;
         padding: 16px;
 
+        @media (min-width:992px) {
+            padding: 16px 17px !important;
+        }
+
         &:hover {
             color: $header-link-color;
             opacity: 0.7;
@@ -276,7 +408,7 @@ label {
     }
     // Header social buttons
     .button {
-        padding: 4px;
+        padding: 6.5px 7px;
 
         svg {
             border-radius: 12px;
@@ -294,10 +426,10 @@ label {
 }
 // Banner section
 .banner {
-    margin-top: 40px;
+    margin-top: 36px;
 
     @media (min-width:992px) {
-        margin-top: 85px;
+        margin-top: 105px;
     }
 
     .wrapper {
@@ -314,10 +446,12 @@ label {
         background-color: $banner-sub-heading-bg-color;
         border-radius: 4px;
         text-transform: uppercase;
-        margin-bottom: 8px;
+        margin-bottom: 8.24px;
         display: inline-block;
+        letter-spacing: 0.66px;
 
         @media (min-width: 992px) {
+            letter-spacing: 1.4px;
             font-size: 14px;
             margin-bottom: 12px;
             line-height: 21px;
@@ -329,10 +463,10 @@ label {
     .title {
         font-family: $font-family-primary;
         font-size: 24px;
-        line-height: 32px;
+        line-height: 32.98px;
         font-weight: $font-weight-semibold;
         color: $banner-title-color;
-        margin-bottom: 12px;
+        margin-bottom: 14px;
         padding-left: 10px;
         padding-right: 10px;
 
@@ -351,22 +485,22 @@ label {
         line-height: 15px;
         font-weight: $font-weight-normal;
         color: $banner-text-color;
-        max-width: 490px;
-        margin: 0 auto;
-        margin-bottom: 34px;
+        max-width: 297px;
+        margin: 0 auto 32px;
         opacity: 0.6;
+        letter-spacing: 0.28px;
 
         @media (min-width: 992px) {
+            margin: 0 auto 34px;
             font-size: 16px;
             line-height: 28px;
+            max-width: 570px;
         }
     }
 }
 // Portfolio image
 .portfolio-wrapper {
-    text-align: center;
-    margin-top: 54px;
-    position: relative;
+    margin-top: 50px;
 
     @media (min-width: 992px) {
         margin-top: 64px;
@@ -374,18 +508,19 @@ label {
 }
 // Stats section (width three cards)
 .stats {
-    padding-top: 0px;
-    background-image: url("../../../images/Rectangle\ 53.svg");
-    background-repeat: no-repeat;
-    background-position: 40% 40%;
-    background-size: none;
-    padding-bottom: 73px;
+    padding-bottom: 0;
+    margin-top: 39px;
 
     @media (min-width: 992px) {
         background-position: 40% 56%;
         background-size: 100%;
         padding-top: 32px;
         margin-top: -10px;
+        background-image: url("../../../images/Rectangle\ 53.svg");
+        background-repeat: no-repeat;
+        background-position: 40% 51%;
+        background-size: none;
+        padding-bottom: 44px;
     }
     // columnt wrapper style
     .col {
@@ -406,6 +541,7 @@ label {
         font-weight: $font-weight-normal;
         border-radius: 4px;
         margin-bottom: 12px;
+        letter-spacing: 1.4px;
 
         @media (min-width: 992px) {
             font-size: 14px;
@@ -422,17 +558,18 @@ label {
         font-weight: $font-weight-semibold;
         font-size: 24px;
         line-height: 32px;
-        max-width: 700px;
         margin-bottom: 12px;
-        padding-left: 15px;
-        padding-right: 15px;
+        max-width: 260px;
+        padding-left: 0;
+        padding-right: 0;
 
         @media (min-width: 992px) {
             font-size: 48px;
             margin-bottom: 14px;
             line-height: 63px;
-            padding-left: 0;
-            padding-right: 0;
+            max-width: 700px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
     // detail text for section(paragraph)
@@ -443,13 +580,14 @@ label {
         font-size: 10px;
         line-height: 15px;
         margin-bottom: 24px;
-        max-width: 630px;
+        max-width: 210px;
         opacity: 0.6;
 
         @media (min-width: 992px) {
             margin-bottom: 46px;
             font-size: 16px;
             line-height: 28px;
+            max-width: 630px;
         }
     }
     // stats cards wrapper for alignments
@@ -465,13 +603,13 @@ label {
     }
     // value cards bg to create border effect
     .bg {
-        margin: 0 16px;
+        margin: 0 8px;
         border: 2px solid rgba(#fff, 0.6);
         border-bottom: none;
         border-radius: 18px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-        margin-bottom: 16px;
+        margin-bottom: 29px;
 
     }
     // value cards style
@@ -482,11 +620,11 @@ label {
 
         @media (min-width: 992px) {
             min-width: 315px;
-            padding: 32px;
+            padding: 32px 32px 36px;
         }
         &:before {
             content: "";
-            background: linear-gradient(0, #000 -25%, rgba(0, 0, 0, 0) 75.16%);
+            background: linear-gradient(0, #000 -25%, rgba(0, 0, 0, 0) 150%);
             width: 0.5%;
             height: 100%;
             position: absolute;
@@ -495,7 +633,7 @@ label {
         }
         &:after {
             content: "";
-            background: linear-gradient(0, #000 -25%, rgba(0, 0, 0, 0) 75.16%);
+            background: linear-gradient(0, #000 -25%, rgba(0, 0, 0, 0) 150%);
             width: 0.5%;
             height: 100%;
             position: absolute;
@@ -503,12 +641,13 @@ label {
             bottom: 0;
         }
         // value title/number
-        .title {
+        .value-title {
             font-family: $font-family-primary;
             font-weight: $font-weight-semibold;
             font-size: 24px;
             line-height: 35px;
             color: $stats-value-text-color;
+            margin-bottom: 4px;
 
             @media (min-width: 992px) {
                 font-size: 44px;
@@ -516,7 +655,7 @@ label {
             }
         }
         // value text/detail text
-        .text {
+        .value-text {
             font-family: $font-family-primary;
             color: $stats-value-text-color;
             opacity: 0.4;
@@ -536,7 +675,7 @@ label {
     // token coloumn style for content alignment center
     .col {
         text-align: center;
-        margin-top: 24px;
+        margin-top: 26px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -552,8 +691,10 @@ label {
         background-color: $token-sub-heading-bg-color;
         border-radius: 4px;
         margin-bottom: 12px;
+        letter-spacing: 0.28px;
 
         @media (min-width: 992px) {
+            letter-spacing: 1.4px;
             font-size: 14px;
             margin-bottom: 12px;
             line-height: 21px;
@@ -566,7 +707,7 @@ label {
         color: $token-title-color;
         font-weight: $font-weight-semibold;
         font-size: 24px;
-        line-height: 32px;
+        line-height: 33px;
         margin-bottom: 12px;
         padding-left: 10px;
         padding-right: 10px;
@@ -580,31 +721,46 @@ label {
         }
     }
     // token secton text (paragraph text)
-    .text {
+    .text,
+    .text2 {
         color: $token-text-color;
         font-weight: 400;
-        font-size: 12px;
+        font-size: 10px;
         line-height: 15px;
         opacity: 0.6;
         margin-bottom: 28px;
-        max-width: 580px;
 
         @media (min-width: 992px) {
-            margin-bottom: 34px;
-            font-size: 14px;
-            line-height: 21px;
+            margin-bottom: 56px;
+            font-size: 16px;
+            line-height: 28px;
         }
     }
+
+    .text {
+        max-width: 210px;
+
+        @media (min-width: 992px) {
+            max-width: 660px;
+        }
+    }
+
     // tocken section image rounded one
     .image {
-        margin-bottom: 70px;
+        margin-bottom: 81px;
+
+        @media (min-width:992px) {
+            margin-bottom: 61px;
+        }
     }
     // modifier style for token section
     &.token-modifier {
-        background-image: url("../../../images/toket-bg.svg");
-        background-size: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
+        @media (min-width:992px) {
+            background-image: url("../../../images/toket-bg.svg");
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     }
     // modifier style for portfolio detail section
     &.portfolio {
@@ -614,32 +770,97 @@ label {
         background-repeat: no-repeat;
         background-size: 100%;
         padding-top: 0px;
-        padding-bottom: 100px;
+        padding-bottom: 111px;
+        margin-top: 122.39px;
 
         @media (min-width: 992px) {
             padding-bottom: 182px;
         }
 
-        .token {
-            .text {
+        .col {
+            margin-top: 0;
+        }
+        // subheading style for portfolio detail section
+        .sub-heading {
+            margin-bottom: 6.22px;
+        }
+        // title style for portfolio detail section
+        .title {
+            margin-bottom: 10px;
+        }
+        // text style for portfolio detail section
+        .text {
+            margin-bottom: 30px;
+
+            @media (min-width:992px) {
+                margin-bottom: 54px;
+            }
+        }
+        // second text style for portfolio detail section
+        .text2 {
+            margin-bottom: 33px;
+            max-width: 280px;
+
+            @media (min-width:992px) {
                 margin-bottom: 34px;
+                max-width: 720px;
+            }
+        }
+        // image style for portfolio detail section
+        .image {
+            margin-bottom: 30px;
+
+            @media (min-width:992px) {
+                margin-bottom: 96px;
             }
         }
     }
-    // modifier style for bot section
+    // modifier style for auto trading bot section
     &.bot {
         background-image: url("../../../images/bot-bg.svg");
         background-position: -63px 94%;
         background-repeat: no-repeat;
         background-size: 140%;
-        padding-top: 60px;
-        padding-bottom: 30px;
+        padding-top: 100px;
+        margin-bottom: 30px;
 
         @media (min-width: 992px) {
             background-position: 0 50%;
             background-size: 100%;
             padding-top: 124px;
-            padding-bottom: 60px;
+            margin-bottom: 100px;
+        }
+
+        // subheading style for bot section
+        .sub-heading {
+            margin-bottom: 8.57px;
+        }
+
+        // title style for bot section
+        .title {
+            margin-bottom: 30px;
+
+            @media (min-width:992px) {
+                margin-bottom: 37px;
+            }
+        }
+        // image style for bot section
+        .image {
+            margin-bottom: 30px;
+
+            @media (min-width:992px) {
+                margin-bottom: 54px;
+            }
+        }
+        // text style for bot section
+        .text {
+            max-width: 320px;
+            margin-bottom: 30px;
+
+            @media (min-width:992px) {
+                max-width: 725px;
+                margin-bottom: 34px;
+            }
         }
     }
 }
@@ -651,36 +872,20 @@ label {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 24px;
         position: relative;
         min-height: 78px;
+        margin-bottom: 13.32px;
+
         @media (min-width: 992px) {
-            min-height: 132px;
+            margin-bottom: 24px;
+            min-height: 150px;
         }
 
     }
-    // style for row 1 and row 2
-    .animate1,
-    .animate2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        animation: animate1 15s linear infinite;
-        min-width: 100%;
-        height: 100%;
-        width: calc(315px * 6);
-        margin: auto auto;
-        padding-left: 100%;
-    }
-    // change row 2 style
-    .animate2 {
-        animation: animate2 18s linear infinite;
-    }
     // stats value card style
     .value {
-        margin: 0 16px;
-        min-width: 215px;
+        margin: 0 12px;
+        min-width: 179px;
         padding: 16px;
         border-radius: 18px;
         background-color: $stats-slider-value-bg-color;
@@ -689,7 +894,7 @@ label {
 
         @media (min-width: 992px) {
             padding: 24px;
-            min-width: 315px;
+            min-width: 323px;
         }
 
         &:before {
@@ -709,7 +914,7 @@ label {
             left: 16px;
             width: 70%;
             height: 1px;
-            background: radial-gradient(100% 50% at 33.98% 52.15%, #FFFFFF 0%, rgba(255, 255, 255, 0) 70%);
+            background: radial-gradient(100% 50% at 33.98% 30%, #FFFFFF 0%, rgba(255, 255, 255, 0) 70%);
         }
     }
     //  value card number top
@@ -725,10 +930,13 @@ label {
         @media (min-width: 992px) {
             font-size: 28px;
             line-height: 42px;
+            margin-bottom: 12px;
         }
         // text with colors
         span {
             font-weight: $font-weight-normal;
+            margin-left: 12px;
+            display: inline-block;
 
             &.red {
                 color: $stats-slider-value-text-red-color;
@@ -765,46 +973,201 @@ label {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100vh - 65px);
+    // style override for account pages all
+    .create,
+    .login,
+    .renew,
+    .new {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .create {
+        margin-top: 31px;
 
-    @media (min-width: 992px) {
-        height: calc(100vh - 120px);
+        @media (min-width:992px) {
+            margin-top: 85px;
+        }
+
+        .dividor {
+            margin-top: 24px;
+            margin-bottom: 24.37px;
+
+            @media (min-width: 992px) {
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+        }
+
+        .form {
+            > .form-group {
+                margin-bottom: 12px;
+
+                @media (min-width:991px) {
+                    margin-bottom: 14px;
+                }
+            }
+        }
+
+        .sub-text {
+            margin-bottom: 119px;
+
+            @media (min-width: 992px) {
+                margin-bottom: 44px;
+            }
+        }
+
+    }
+    .login {
+        margin-top: 31px;
+
+        @media (min-width:992px) {
+            margin-top: 65px;
+        }
+
+        .link-wrapper {
+            .link {
+                margin-bottom: 8px;
+             }
+        }
+
+        .dividor {
+            margin-top: 14px;
+            margin-bottom: 20.37px;
+
+            @media (min-width: 992px) {
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+        }
+
+        .form {
+            > .form-group {
+                margin-bottom: 10px;
+
+                @media (min-width:991px) {
+                    margin-bottom: 14px;
+                }
+            }
+        }
+
+        .chekbox-forgot {
+            margin-top: 12px;
+            margin-bottom: 62px;
+
+            @media (min-width:992px) {
+                margin-top: 18.96px;
+                margin-bottom: 39.99px;
+            }
+        }
+
+        .sub-text {
+            margin-bottom: 173.35px;
+
+            @media (min-width: 992px) {
+                margin-bottom: 54px;
+            }
+        }
+    }
+    .renew {
+        margin-top: 143px;
+
+        @media (min-width:992px) {
+            margin-top: 199px;
+        }
+
+        .title {
+            margin-bottom: 4.48px;
+        }
+
+        .detail-text {
+            margin-bottom: 29.52px;
+        }
+
+        .form {
+            > .form-group {
+                margin-bottom: 14px;
+
+                @media (min-width:991px) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+    .new {
+        margin-top: 143px;
+
+        @media (min-width:992px) {
+            margin-top: 85px;
+        }
+
+        .title {
+            margin-bottom: 0.48px;
+        }
+
+        .detail-text {
+            margin-bottom: 43.52px;
+        }
+
+        .form {
+            > .form-group {
+                margin-bottom: 14px;
+
+                @media (min-width:991px) {
+                    margin-bottom: 14px;
+                }
+            }
+        }
+
+        .btn-primary {
+            margin-top: 24px;
+
+            @media (min-width:992px) {
+                margin-top: 92px;
+            }
+        }
     }
     // account page heading main
     .title {
         color: $acc-title-color;
-        margin-bottom: 12px;
-        font-size: 20px;
-        line-height:30px;
+        margin-bottom: 7px;
+        font-size: 19.69px;
+        line-height:29.53px;
         font-weight: $font-weight-semibold;
 
         @media (min-width: 992px) {
             font-size: 34px;
             line-height: 51px;
+            margin-bottom: 12px;
         }
     }
     // account page detail text
     .detail-text {
         color: $acc-text-color;
-        margin-bottom: 40px;
+        font-weight: $font-weight-normal;
+        margin-bottom: 44px;
         font-size: 11px;
         line-height: 16px;
 
         @media (min-width: 992px) {
-            font-size: 20px;
-            line-height: 28px;
+            margin-bottom: 40px;
+            font-size: 19px;
+            line-height: 28.5px;
         }
     }
     // account page text after form submit button
     .sub-text {
         color: $acc-text-color;
-        margin-bottom: 40px;
-        font-size: 11px;
-        line-height: 16px;
+        font-size: 8.98px;
+        line-height: 13.47px;
+        margin-top: 14px;
+        margin-bottom: 119px;
 
         @media (min-width: 992px) {
             font-size: 14px;
             line-height: 21px;
+            margin-top: 26px;
+            margin-bottom: 44px;
         }
     }
     //// Account page Google or Apple link wrapper style
@@ -818,8 +1181,8 @@ label {
         // Account page Google or Apple link buttons style
         .link {
             padding: 16px 54px;
-            margin-right: 20px;
-            margin-bottom: 14px;
+            margin-right: 0;
+            margin-bottom: 4px;
             width: 100%;
 
             @media (min-width: 769px) {
@@ -836,7 +1199,12 @@ label {
             }
 
             svg {
-                margin-right: 18px;
+                margin-right: 16px;
+
+                @media (max-width:992px) {
+                    width: 21px;
+                    height: 21px;
+                }
             }
 
             &:hover {
@@ -856,20 +1224,17 @@ label {
     }
     // Form dividor for accont pages
     .dividor {
-        margin-top: 20px;
         display: flex;
         justify-content: center;
         position: relative;
 
-        @media (min-width: 992px) {
-        margin-top: 40px;
-        }
         // ' OR ' text with before and after lines
         .text {
             text-align: center;
-            color: $form-dividor-color;
-            font-size: 8px;
-            line-height: 12px;
+            color: $form-dividor-text-color;
+            font-weight: $font-weight-semibold;
+            font-size: 8.42px;
+            line-height: 12.63px;
 
             @media (min-width: 992px) {
                 font-size: 14px;
@@ -909,37 +1274,63 @@ label {
     }
     // Account Form
     .form {
-        margin-top: 26px;
-        margin-bottom: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
-        @media (min-width: 992px) {
-            margin-top: 40px;
-        }
+        .btn-primary {
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: $font-weight-semibold;
+            border-radius: 8.44px;
+            padding: 13.5px;
 
+            @media (min-width:992px) {
+                border-radius: 14px;
+                font-size: 16px;
+                line-height: 24px;
+                padding: 17px;
+            }
+
+            &:before {
+                border-radius: 8.44px;
+
+                @media (min-width:992px) {
+                    border-radius: 14px;
+                }
+            }
+        }
     }
     //  account Remember password
     .chekbox-forgot {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 30px;
-        margin-top: 20px;
+        margin-top: 12px;
+        margin-bottom: 44px;
+
+        @media (min-width:992px) {
+            margin-top: 18px;
+            margin-bottom: 39.96px;
+        }
         // account page rememebr label
         label {
             color: $form-checkbox-label-color;
-            font-size: 12px;
-            line-height: 18px;
+            font-size: 8.98px;
+            line-height: 13.47px;
             font-weight: $font-weight-normal;
+
+            @media (min-width:992px) {
+                font-size: 12px;
+                line-height: 18px;
+            }
         }
 
     }
     // fogot link for account page
     .forgot {
-        font-size: 8px;
-        line-height: 12px;
+        font-size: 8.98px;
+        line-height: 13.47px;
         font-weight: $font-weight-normal;
 
         @media (min-width: 992px) {
@@ -954,13 +1345,13 @@ label {
         align-items: center;
         justify-content: space-between;
         padding-bottom: 20px;
-        margin-top: 20px;
+
         // footer privacy link
         .link {
             color: $form-footer-link-color;
             font-weight: $font-weight-normal;
-            font-size: 14px;
-            line-height: 21px;
+            font-size: 12px;
+            line-height: 18px;
             @media (min-width: 992px) {
                 font-size: 14px;
                 line-height: 21px;
@@ -975,8 +1366,8 @@ label {
         .text {
             color: $form-footer-text-color;
             font-weight: $font-weight-normal;
-            font-size: 14px;
-            line-height: 21px;
+            font-size: 12px;
+            line-height: 18px;
             @media (min-width: 992px) {
                 font-size: 14px;
                 line-height: 21px;
@@ -988,7 +1379,11 @@ label {
 // Footer section
 .footer {
     position: relative;
-    padding: 42px 0;
+    padding: 49px 0 23.63px;
+
+    @media (min-width:992px) {
+        padding: 42px 0 46px;
+    }
 
     &:before {
         content: "";
@@ -1009,9 +1404,10 @@ label {
         line-height: 35px;
         margin-bottom: 24px;
         font-weight: $font-weight-black;
+        display: inline-block;
 
         @media (min-width: 992px) {
-            margin-bottom: 24px;
+            margin-bottom: 30px;
             font-size: 36px;
             line-height: 54px;
         }
@@ -1027,11 +1423,12 @@ label {
         font-weight: $font-weight-normal;
         font-size: 12px;
         line-height: 15px;
-        padding: 8px 0;
+        padding: 11px 0;
         display: block;
         letter-spacing: -0.2px;
 
         @media (min-width: 992px) {
+            padding: 15px 0;
             font-size: 15px;
             line-height: 20px;
         }
@@ -1100,22 +1497,4 @@ label {
 
     }
 }
-// Anomation for Stats Slider
-// Row 1
-@keyframes animate1 {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-315px * 4));
-    }
-}
-// Row 2
-@keyframes animate2 {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-315px * 4));
-    }
-}
+

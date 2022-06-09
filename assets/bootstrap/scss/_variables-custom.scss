@@ -26,6 +26,7 @@ $transparent: transparent;
 
 // Btutton Primary
 $primary-button-bg-color: $brand1;
+$primary-button-bg-hover-color: rgba($grey-3, 0.2);
 $primary-button-hover-bg-color: $transparent;
 $primary-button-border-color: $grey-3;
 $primary-button-hover-border-color: $brand1;
@@ -34,7 +35,7 @@ $primary-button-hover-text-color: $brand1;
 
 // Btutton outline
 $outline-button-bg-color: $transparent;
-$outline-button-border-color: $brand1;
+$outline-button-border-color: rgba($brand1, 0.4);
 $outline-button-hover-bg-color: $brand1;
 $outline-button-hover-border-color: $brand1;
 $outline-button-text-color: $brand1;
@@ -43,31 +44,35 @@ $outline-button-hover-text-color: $grey-3;
 // Account
 $acc-title-color: $grey-1;
 $acc-text-color: rgba($grey-1, 0.6);
+$acc-toggler-button-bg: rgba($grey-1, 0.1);
 
 // Form
 $form-link-color: $brand1;
 $form-checkbox-color: $brand1;
 $input-field-bg-color: rgba($grey-1, 0.1);
-$input-field-text-color: rgba($grey-1, 0.6);
+$input-field-text-color: rgba($grey-1, 0.5);
 $input-field-border-color: rgba($grey-1, 0.1);
 $input-field-border-active-color: $brand1;
 $form-footer-link-color: rgba($grey-1,0.6);
 $form-footer-text-color: rgba($grey-1,0.6);
-$form-dividor-color: rgba($grey-1,0.6);
+$form-dividor-color: rgba($grey-1,0.2);
+$form-dividor-text-color: rgba($grey-1,0.4);
 $form-link-icon-hover-fill-color: $grey-2;
 $form-link-icon-hover-stroke-color: $brand1;
 $form-checkbox-color: $brand1;
 $form-checkbox-label-color: rgba($grey-1,0.6);
+$form-checkbox-bg-color: rgba($grey-1,0.1);
 
 //Header
 $headers-bg-color: $grey-2;
 $header-mobile-bg-color: $grey-1;
-$header-mobile-wrapper-bg-color: $grey-3;
+$header-mobile-wrapper-bg-color: $grey-2;
 $header-logo-color: $grey-1;
-$header-link-color: $grey-1;
-$header-link-divider-color: $grey-1;
+$header-link-color: rgba($grey-1, 0.6);
+$header-link-divider-color: rgba($grey-1, 0.6);
 $header-social-link-hover-bg-color: $brand1;
 $header-social-link-hover-fill-color: $grey-3;
+$header-wrapper-text-color: rgba($grey-1, 0.4);
 
 //Banner
 $banner-sub-heading-bg-color: rgba($brand1, 0.2);
