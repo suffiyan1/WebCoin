@@ -1,11 +1,12 @@
 // get html document ready
 $(document).ready(function () {
     //   onclick hamburger function
-    $(".navbar-toggler").on('click', function(){
-        // add active class in header
+      var navbarToggler = $(".navbar-toggler");
+      navbarToggler.on('click', function(){
+        // toggle active class in header
         $(".navigation").toggleClass("active");
-        // add active class in toggler button
-        $(".navbar-toggler").toggleClass("active");
+        // toggle active class in toggler button
+        navbarToggler.toggleClass("active");
       });
       // Stat Slider 1
       $('.slick.marquee1').slick({
