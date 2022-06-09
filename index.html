@@ -5,91 +5,94 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+
+  <link rel="stylesheet" type="text/css" href="./assets/slick-1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/slick-1.8.1/slick/slick-theme.css" />
   <!-- Bootstrap 5 + Custom style -->
   <link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.css">
   <title>WebCoin-Home</title>
-  <base href="./"/>
+  <base href="./" />
 </head>
 
 <body>
   <!-- Header -->
   <header class="navigation" id="Nav">
     <div class="container">
-        <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#">LOGO</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="icon"></span>
-            </button>
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="/index.html">LOGO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse pe-0" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link link" href="#">Feature</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link" href="#">Contact Us</a>
-                    </li>
-                </ul>
-                <div class="my-2 my-lg-0">
-                    <button class="btn my-2 my-sm-0 button" type="submit">
-                        <svg width="54" height="54" viewBox="0 0 54 54" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M29.4893 21.6361H30.9386V19.1118C30.6886 19.0774 29.8287 19 28.8271 19C26.7375 19 25.306 20.3144 25.306 22.7302V24.9535H23V27.7754H25.306V34.876H28.1332V27.7761H30.3459L30.6972 24.9541H28.1326V23.01C28.1332 22.1944 28.3528 21.6361 29.4893 21.6361Z"
-                                fill="#FFBB54" />
-                            <rect opacity="0.4" x="0.75" y="0.75" width="52.5" height="52.5" rx="13.25"
-                                stroke="#FFBB54" stroke-width="1.5" />
-                        </svg>
-                    </button>
-                    <button class="btn my-2 my-sm-0 button" type="submit">
-                        <svg width="54" height="54" viewBox="0 0 54 54" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M36.5556 20.881C35.8283 21.2 35.0534 21.4114 34.2456 21.5141C35.0767 21.0179 35.711 20.2381 36.0092 19.2982C35.2343 19.7602 34.3788 20.0866 33.467 20.2687C32.7312 19.4852 31.6826 19 30.5386 19C28.319 19 26.5321 20.8016 26.5321 23.0101C26.5321 23.3279 26.559 23.6334 26.625 23.9243C23.292 23.7618 20.3428 22.1643 18.3616 19.7309C18.0157 20.331 17.8128 21.0179 17.8128 21.7573C17.8128 23.1458 18.5278 24.3766 19.5936 25.0891C18.9494 25.0769 18.3176 24.8899 17.7822 24.5953C17.7822 24.6076 17.7822 24.6234 17.7822 24.6393C17.7822 26.5876 19.1719 28.2058 20.9942 28.5786C20.6679 28.6678 20.3122 28.7106 19.9431 28.7106C19.6864 28.7106 19.4273 28.6959 19.1841 28.6421C19.7036 30.2298 21.1776 31.397 22.9302 31.4349C21.5662 32.5019 19.8343 33.1448 17.9594 33.1448C17.6307 33.1448 17.3153 33.1301 17 33.0898C18.7759 34.235 20.8806 34.8889 23.1502 34.8889C30.5276 34.8889 34.5609 28.7778 34.5609 23.4807C34.5609 23.3034 34.5548 23.1323 34.5462 22.9624C35.3419 22.3978 36.0104 21.6926 36.5556 20.881Z"
-                                fill="#FFBB54" />
-                            <rect opacity="0.4" x="0.75" y="0.75" width="52.5" height="52.5" rx="13.25"
-                                stroke="#FFBB54" stroke-width="1.5" />
-                        </svg>
-                    </button>
-                    <button class="btn my-2 my-sm-0 button" type="submit">
-                        <svg width="54" height="54" viewBox="0 0 54 54" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M24 19H30C32.761 19 35 21.239 35 24V30C35 32.761 32.761 35 30 35H24C21.239 35 19 32.761 19 30V24C19 21.239 21.239 19 24 19ZM30 33.5C31.93 33.5 33.5 31.93 33.5 30V24C33.5 22.07 31.93 20.5 30 20.5H24C22.07 20.5 20.5 22.07 20.5 24V30C20.5 31.93 22.07 33.5 24 33.5H30Z"
-                                fill="#FFBB54" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M23 27C23 24.791 24.791 23 27 23C29.209 23 31 24.791 31 27C31 29.209 29.209 31 27 31C24.791 31 23 29.209 23 27ZM24.5 27C24.5 28.378 25.622 29.5 27 29.5C28.378 29.5 29.5 28.378 29.5 27C29.5 25.621 28.378 24.5 27 24.5C25.622 24.5 24.5 25.621 24.5 27Z"
-                                fill="#FFBB54" />
-                            <circle cx="31.3" cy="22.7" r="0.533" fill="#FFBB54" />
-                            <rect opacity="0.4" x="0.75" y="0.75" width="52.5" height="52.5" rx="13.25"
-                                stroke="#FFBB54" stroke-width="1.5" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item active">
+              <a class="nav-link link" href="#">Feature</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="#">Contact Us</a>
+            </li>
+          </ul>
+          <div class="my-2 my-lg-0">
+            <button class="btn my-2 my-sm-0 button" type="submit">
+              <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M29.4893 21.6361H30.9386V19.1118C30.6886 19.0774 29.8287 19 28.8271 19C26.7375 19 25.306 20.3144 25.306 22.7302V24.9535H23V27.7754H25.306V34.876H28.1332V27.7761H30.3459L30.6972 24.9541H28.1326V23.01C28.1332 22.1944 28.3528 21.6361 29.4893 21.6361Z"
+                  fill="#FFBB54" />
+                <rect opacity="0.4" x="0.75" y="0.75" width="52.5" height="52.5" rx="13.25" stroke="#FFBB54"
+                  stroke-width="1.5" />
+              </svg>
+            </button>
+            <button class="btn my-2 my-sm-0 button" type="submit">
+              <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M36.5556 20.881C35.8283 21.2 35.0534 21.4114 34.2456 21.5141C35.0767 21.0179 35.711 20.2381 36.0092 19.2982C35.2343 19.7602 34.3788 20.0866 33.467 20.2687C32.7312 19.4852 31.6826 19 30.5386 19C28.319 19 26.5321 20.8016 26.5321 23.0101C26.5321 23.3279 26.559 23.6334 26.625 23.9243C23.292 23.7618 20.3428 22.1643 18.3616 19.7309C18.0157 20.331 17.8128 21.0179 17.8128 21.7573C17.8128 23.1458 18.5278 24.3766 19.5936 25.0891C18.9494 25.0769 18.3176 24.8899 17.7822 24.5953C17.7822 24.6076 17.7822 24.6234 17.7822 24.6393C17.7822 26.5876 19.1719 28.2058 20.9942 28.5786C20.6679 28.6678 20.3122 28.7106 19.9431 28.7106C19.6864 28.7106 19.4273 28.6959 19.1841 28.6421C19.7036 30.2298 21.1776 31.397 22.9302 31.4349C21.5662 32.5019 19.8343 33.1448 17.9594 33.1448C17.6307 33.1448 17.3153 33.1301 17 33.0898C18.7759 34.235 20.8806 34.8889 23.1502 34.8889C30.5276 34.8889 34.5609 28.7778 34.5609 23.4807C34.5609 23.3034 34.5548 23.1323 34.5462 22.9624C35.3419 22.3978 36.0104 21.6926 36.5556 20.881Z"
+                  fill="#FFBB54" />
+                <rect opacity="0.4" x="0.75" y="0.75" width="52.5" height="52.5" rx="13.25" stroke="#FFBB54"
+                  stroke-width="1.5" />
+              </svg>
+            </button>
+            <button class="btn my-2 my-sm-0 button" type="submit">
+              <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M24 19H30C32.761 19 35 21.239 35 24V30C35 32.761 32.761 35 30 35H24C21.239 35 19 32.761 19 30V24C19 21.239 21.239 19 24 19ZM30 33.5C31.93 33.5 33.5 31.93 33.5 30V24C33.5 22.07 31.93 20.5 30 20.5H24C22.07 20.5 20.5 22.07 20.5 24V30C20.5 31.93 22.07 33.5 24 33.5H30Z"
+                  fill="#FFBB54" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M23 27C23 24.791 24.791 23 27 23C29.209 23 31 24.791 31 27C31 29.209 29.209 31 27 31C24.791 31 23 29.209 23 27ZM24.5 27C24.5 28.378 25.622 29.5 27 29.5C28.378 29.5 29.5 28.378 29.5 27C29.5 25.621 28.378 24.5 27 24.5C25.622 24.5 24.5 25.621 24.5 27Z"
+                  fill="#FFBB54" />
+                <circle cx="31.3" cy="22.7" r="0.533" fill="#FFBB54" />
+                <rect opacity="0.4" x="0.75" y="0.75" width="52.5" height="52.5" rx="13.25" stroke="#FFBB54"
+                  stroke-width="1.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
     </div>
-</header>
+  </header>
   <!-- Main Banner -->
   <div class="container">
     <div class="row">
       <div class="col-12 col-xl-10 offset-xl-1 banner">
         <div class="wrapper">
+          <!-- banner sub heading -->
           <span class="sub-heading">LOREM IPSUM DOLOR SIT AMET</span>
-          <h1 class="title">Make Your Crypto Transaction Easier, Plan Your Next Move Here
-          </h1>
+          <!-- banner title -->
+          <h1 class="title">Make Your Crypto Transaction Easier, Plan Your Next Move Here</h1>
+          <!-- banner text -->
           <p class="text">Learning how
             cryptocurrency works is like learning a new language. It is incredibly difficult at the beginning, but
             once
             it clicks it will stick with you forever</p>
+          <!-- banner button -->
           <button class="btn btn-primary">Learn more</button>
         </div>
       </div>
@@ -99,7 +102,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-xl-10 offset-xl-1 portfolio-wrapper">
-        <img class="img-fluid portfolio-wrapper__image" src="assets/images/Portfolio Tracker.png" alt="Protfolio">
+        <img class="img-fluid" src="assets/images/Portfolio Tracker.png" alt="Protfolio">
       </div>
     </div>
   </div>
@@ -108,28 +111,35 @@
     <div class="container">
       <div class="row">
         <div class="col-10 offset-1 col">
+          <!-- sub heading for stat section -->
           <span class="sub-heading">LOREM IPSUM DOLOR SIT AMET</span>
+          <!-- heading for stat section -->
           <h2 class="title">why crypto are a big opportunity to became rich</h2>
+          <!-- text for stat section -->
           <p class="detail-text">Investing in crypto asset can help you to have potential to grow bigger and
             faster.
             Plan your next move because every step contributes towards your goal</p>
+          <!-- wraper for stat section -->
           <div class="wrapper">
+            <!-- single stat card for stat section -->
             <div class="bg">
               <div class="value">
-                <h3 class="title">21532</h3>
-                <p class="text">Registered users</p>
+                <h3 class="value-title">21532</h3>
+                <p class="value-text">Registered users</p>
               </div>
             </div>
+            <!-- single stat card for stat section -->
             <div class="bg">
               <div class="value">
-                <h3 class="title">22149</h3>
-                <p class="text">Mining power</p>
+                <h3 class="value-title">22149</h3>
+                <p class="value-text">Mining power</p>
               </div>
             </div>
+            <!-- single stat card for stat section -->
             <div class="bg">
               <div class="value">
-                <h3 class="title">45867.11</h3>
-                <p class="text">Total Deposit</p>
+                <h3 class="value-title">45867.11</h3>
+                <p class="value-text">Total Deposit</p>
               </div>
             </div>
           </div>
@@ -154,59 +164,167 @@
   </div>
   <!-- Stats Slider Section -->
   <div class="stats-slider">
-    <div class="wrapper">
-      <div class="animate1">
-        <div class="value">
-          <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
-          <p class="text">614.3 <span>$613.75</span></p>
+    <div class="slick marquee1 wrapper">
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
         </div>
-        <div class="value">
-          <h3 class="title">BNB/BUSD <span class="red">-35.23%</span></h3>
-          <p class="text">614.3 <span>$613.75</span></p>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
         </div>
-        <div class="value">
-          <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
-          <p class="text">614.3 <span>$613.75</span></p>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
         </div>
-        <div class="value">
-          <h3 class="title">BNB/BUSD <span class="red">-35.23%</span></h3>
-          <p class="text">614.3 <span>$613.75</span></p>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
         </div>
-        <div class="value">
-          <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
-          <p class="text">614.3 <span>$613.75</span></p>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
         </div>
-        <div class="value">
-          <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
-          <p class="text">614.3 <span>$613.75</span></p>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="wrapper">
-      <div class="animate2">
-        <div class="value">
-          <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
-          <p class="text">614.3 <span>$613.75</span></p>
+    <div class="slick marquee2 wrapper">
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
         </div>
-        <div class="value">
-          <h3 class="title">BNB/BUSD <span class="red">-35.23%</span></h3>
-          <p class="text">614.3 <span>$613.75</span></p>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
         </div>
-        <div class="value">
-          <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
-          <p class="text">614.3 <span>$613.75</span></p>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
         </div>
-        <div class="value">
-          <h3 class="title">BNB/BUSD <span class="red">-35.23%</span></h3>
-          <p class="text">614.3 <span>$613.75</span></p>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
         </div>
-        <div class="value">
-          <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
-          <p class="text">614.3 <span>$613.75</span></p>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
         </div>
-        <div class="value">
-          <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
-          <p class="text">614.3 <span>$613.75</span></p>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="slick-slide">
+        <div class="inner">
+          <div class="value">
+            <h3 class="title">BNB/BUSD <span class="yellow">-35.23%</span></h3>
+            <p class="text">614.3 <span>$613.75</span></p>
+          </div>
         </div>
       </div>
     </div>
@@ -216,13 +334,18 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-xl-10 offset-xl-1 col">
+          <!-- sub heading for auto trading bot section -->
           <span class="sub-heading">LOREM IPSUM DOLOR SIT AMET</span>
+          <!-- heading for auto trading bot section -->
           <h2 class="title">The AutoTrading bot</h2>
+          <!-- image for auto trading bot section -->
           <img class="img-fluid image" src="./assets/images/trading-bot.png" alt="">
+          <!-- text for auto trading bot section -->
           <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit, nulla non
             felis. Purus vestibulum risus vivamus id. Sagittis, viverra enim blandit id consectetur tortor egestas. Nisi
             egestas consequat aenean pellentesque quis scelerisque facilisi at enim. Risus quam risus tempus imperdiet.
           </p>
+          <!-- button for auto trading bot section -->
           <button class="btn btn-primary">Get in touch</button>
         </div>
       </div>
@@ -233,15 +356,21 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-xl-10 offset-xl-1 col">
+          <!-- sub heading for portfolio detail section -->
           <span class="sub-heading">LOREM IPSUM DOLOR SIT AMET</span>
+          <!-- heading for portfolio detail section -->
           <h2 class="title">The portfolio History</h2>
+          <!-- text for portfolio detail section -->
           <p class="text">Investing in crypto asset can help you to have potential to grow bigger and faster.
             Plan your next move because every step contributes towards your goal</p>
+          <!-- image for portfolio detail section -->
           <img class=" img-fluid image" src="assets/images/portfolio history.png" alt="">
-          <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit, nulla non
+          <!-- text second for portfolio detail section -->
+          <p class="text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit, nulla non
             felis. Purus vestibulum risus vivamus id. Sagittis, viverra enim blandit id consectetur tortor egestas. Nisi
             egestas consequat aenean pellentesque quis scelerisque facilisi at enim. Risus quam risus tempus imperdiet.
           </p>
+          <!-- button for portfolio detail section -->
           <button class="btn btn-primary">Search Portfolio</button>
         </div>
       </div>
@@ -252,11 +381,13 @@
     <div class="container px-xl-0">
       <div class="row">
         <div class="col-12 col-xl-10 offset-xl-1 px-xl-0">
+          <!-- brand logo for footer -->
           <div class=".navigation">
             <a class="navbar-brand" href="#">LOGO</a>
           </div>
           <div class="row">
             <div class="col-12 col-xl-7">
+              <!-- footer links -->
               <div class="row">
                 <div class="col-6 col-xl-3">
                   <a href="#" class="link">Email Marketing</a>
@@ -319,7 +450,7 @@
             </div>
           </div>
           <!-- Copyright and Terms Condition -->
-          <div class="row mt-4">
+          <div class="row mt-3 mt-lg-5 pt-2">
             <div class="col-12 col-xl-8 order-1 order-xl-0">
               <p class="copyright">Copyright © 2020. LogoIpsum. All rights reserved.</p>
             </div>
@@ -335,8 +466,12 @@
     </div>
   </div>
 
+  <!-- Jquery -->
   <script src="assets/jquery/jquery.min.js"></script>
+  <!-- Bootstrap JS bundle having popper -->
   <script src="assets/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script type="text/javascript" src="./assets/slick-1.8.1/slick/slick.min.js"></script>
+  <!-- custom js -->
   <script src="assets/bootstrap/dist/js/custom.js"></script>
 </body>
 
